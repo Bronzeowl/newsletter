@@ -1,0 +1,437 @@
+@import url('https://assets.snappykraken.com/global/css/utilities.min.css');
+@import url('https://assets.snappykraken.com/global/css/vessel-modal-simple.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+$red: #D17A5D;
+$darkred: #B44513;
+$lightorange: #F0CF97;
+$orange:  #C88E2D;
+$darkorange: #AA7317;
+$darkgreen: #262C26;
+$green: #304949;
+$lightblue: #C6E1E5;
+$blue: #93B9BE;
+$lightteal: #92B9BF;
+$teal: #5F888F;
+$darkteal: #60888E;
+$darkbrown: #070606;
+$gold: #C78D38;
+$lighteryellow: #FFFDEF;
+$lightyellow: #FFFBDB;
+$yellow: #FCF5DB;
+$cream: #FFFAF0;
+$salmon: #CF7A60;
+$grey: #E4E4E4;
+$white: #FFFDF0;
+$black: #271C20;
+$darkgrey: #727B78;
+$hover1: #4A7177;
+$hover2: #213434;
+$hover3: #101410;
+
+@import 'header';
+@import 'exit';
+@import 'platform';
+@import 'vessel';
+@import 'carousel';
+@import 'confirmation';
+
+html {
+    overflow-x: hidden;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    font: 400 20px/34px 'Crimson Text';
+    padding-top: 0;
+    overflow-x: hidden;
+}
+a, .btn {
+    transition: all .2s ease-in-out;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+p {
+    margin: 0 0 1.5em 0;
+    &:last-child {
+        margin: 0;
+    }
+}
+.form-control {
+    font: 400 20px 'Roboto';
+    border-radius: 0;
+    border: 0;
+}
+.btn {
+    transition: all .2s ease-in-out;
+    font: 400 32px/44.8px 'Bebas Neue';
+    border-radius: 0;
+    border: 0;
+    padding: .3em 2.75em;
+    height: 58px;
+    cursor: pointer;
+    @media(max-width:767px) {
+        font-size: 28px;
+        width: 100%;
+    }
+    @media(max-width:320px) {
+        font-size: 25px;
+    }
+    &.btn-primary {
+        background: $red;
+        color: $green;
+        &:hover {
+            background: $orange;
+            color: $lightorange
+        }
+    }
+}
+
+#hero{
+    background: linear-gradient(180deg, rgba(39,21,9,0) 0%, rgba(39,21,9,0.7) 30%, rgba(39,21,9,1) 100%),
+    no-repeat 50% 100% / cover url(../img/bg_hero.png);
+    @media(max-width: 991px){
+        background: no-repeat 50% 0% / 200% url(../img/bg_hero-medium.png);  
+        .container{
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    @media(max-width: 575px){
+        background-size: 300%;
+    }
+    .block-headline{
+        padding-top: 10%;
+        @media(max-width: 1199px){
+            padding-top: 20%;
+        }
+        @media(max-width: 991px){
+            padding-top: 50vw;
+        }
+    }
+    .main-headline{
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            border-left: 5px solid $blue;
+            height: 20%;
+            left: 2%;
+            bottom: 90%;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            border-right: 5px solid $gold;
+            height: 100%;
+            left: 4%;
+            bottom: 5%;
+        }
+        @media(max-width: 991px){
+            &:before{
+                display: none;
+            }
+            &:after{
+                display: none;
+            }
+        }
+        h1{
+            font: 400 8rem 'Bebas Neue';
+            color: $lightyellow;
+            letter-spacing: 0.05em;
+            @media(max-width: 1199px){
+                font-size: 7.5rem;
+                height: 50vw;
+            }
+            @media(max-width: 991px){
+                height: auto;
+                padding: 3rem;
+            }
+            @media(max-width: 575px){
+                padding: 2rem;
+            }
+
+            span{
+                background: #271C20;
+                padding: 0 1rem 0 10rem;
+                @media(max-width: 991px){
+                    background: none;
+                    padding: 0;
+                    }
+            }
+            .one, .two{
+                -webkit-box-shadow: 20px 20px 0px 3px rgba(95,136,143,0.57); 
+                box-shadow: 20px 20px 0px 3px rgba(95,136,143,0.57);
+                @media(max-width: 991px){
+                    -webkit-box-shadow: none; 
+                    box-shadow: none;
+                    }
+            }
+            .three{
+                font-size: 4rem;
+                position: relative;
+                bottom: 57px;
+                -webkit-box-shadow: 20px 20px 0px 3px rgba(95,136,143,0.57); 
+                box-shadow: 20px 20px 0px 3px rgba(95,136,143,0.57);  
+                @media(max-width: 991px){
+                    -webkit-box-shadow: none; 
+                    box-shadow: none;
+                }  
+            }
+            .four{
+                -webkit-box-shadow: 20px 20px 0px 0px rgba(95,136,143,0.57), -593px 20px 0px rgba(95,136,143,0.57); 
+                box-shadow: 20px 20px 0px 0px rgba(95,136,143,0.57), -593px 20px 0px rgba(95,136,143,0.57);  
+                font-size: 4rem;
+                position: relative;
+                bottom: 133px;
+                @media(max-width: 1199px){
+                    -webkit-box-shadow: 20px 20px 0px 0px rgba(95,136,143,0.57), -586px 20px 0px rgba(95,136,143,0.57); 
+                    box-shadow: 20px 20px 0px 0px rgba(95,136,143,0.57), -586px 20px 0px rgba(95,136,143,0.57);  
+                    }
+                @media(max-width: 991px){
+                    -webkit-box-shadow: none; 
+                    box-shadow: none;
+                }  
+
+            }
+        }
+    }
+}
+
+#intro{
+    color: $lightyellow;
+    padding-bottom: 4rem;
+    margin-top: -5%;
+    @media(max-width: 1199px){
+        margin-top: 0;
+    }
+    @media(max-width: 991px){
+        padding-bottom: 0;
+        .main-headline{
+            background: linear-gradient(0deg, rgba(39,21,9,1) 0%, rgba(39,21,9,0.3519782913165266) 100%);
+            h1{
+                font-size: 6rem;
+                @media(max-width: 767px){
+                    font-size: 4rem;
+                }
+                @media(max-width: 575px){
+                    font-size: 3rem;
+                }
+                .one{
+                    color: $teal;
+                    font-size: 4rem;
+                    @media(max-width: 767px){
+                        font-size: 2rem
+                    }
+                }        
+            }
+        }
+        .text{
+            position: relative;
+            background: #271509;
+            margin-top: -9px;
+            &:before{
+                content:  '';
+                position: absolute;
+                border-left: 5px solid $gold;
+                height: 95%;
+                left: 3%;
+            }
+            @media(max-width: 767px){
+                margin-top: -11px;
+            }
+        }
+    }
+    .highlight{
+        color: $lightblue;
+        font: 400 36px 'Bebas Neue';
+        margin: 0 0 .5em 0;
+        @media(max-width: 575px){
+            font-size: 26px;
+        }
+    }
+    .text{
+        font-weight: 600;
+        font-size: 22px;
+        @media(max-width: 767px){
+            font-size: 20px;
+        }
+    }
+}
+
+#subscribe {
+    color: $yellow;
+    background: $green;       
+    h2 {
+        font: italic 400 20px 'Crimson Text';
+        letter-spacing: .05em;
+        text-transform: normal;
+        @media(max-width:991px){
+            font-size: 20px;
+        }
+        @media(max-width:575px){
+            font-size: 1.4rem;
+        }
+        .large-text {
+            font: 400 3.5rem/4.9rem 'Bebas Neue';
+            color: $lightorange;
+            margin-top: 1rem;
+            letter-spacing: .13em;
+            @media(max-width:767px){
+                font: 400 5rem/5rem 'Bebas Neue';
+            }
+            @media(max-width:767px){
+                font: 400 3.8rem/3.8rem 'Bebas Neue';
+            }
+            @media(max-width:430px){
+                font: 400 3rem/3rem 'Bebas Neue';
+            }
+        }
+    }
+    &.bottom{
+        background: $orange;
+        color: $lighteryellow;
+        h2{
+            color: $lighteryellow;
+            .large-text{
+                color: $lighteryellow;
+            }
+        }
+        .form-control{
+            background: $lightorange;
+            color: $darkorange;
+            &::placeholder{
+                color: $darkorange;
+            }
+        }
+        .btn{
+            background: $darkred;
+            color: $lighteryellow;
+            &:hover{
+                background: $green;
+                color: $lightteal;
+            }
+        }      
+    }
+    .form-control{
+        background: $teal;
+        color: $lightteal;
+        &::placeholder {
+            color: $lightteal;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.wrapper{
+    background: repeat 50% / 70% url(../img/bg_slider.png);
+    padding: 5rem 0;
+}
+
+#slider {
+    @import 'carousel';
+}
+
+#quote {
+    background: $darkred;
+    .fa-twitter {
+        font-size: 3.5vw;
+        color: $red;
+        @media(max-width:991px){
+            font-size: 50px;
+        }
+        @media(max-width: 767px){
+            font-size: 40px;
+        }
+        @media(max-width: 575px){
+            font-size: 30px;
+        }
+    }
+    .quote{
+        blockquote {
+            font: italic 700 1.6rem/2.24rem 'Crimson Text';
+            color: $cream;
+            @media(max-width:1199px){
+                font: italic 700 1.8rem/2.7rem 'Crimson Text';
+            }
+            @media(max-width:767px){
+                font: italic 700 1.4rem/2.1rem 'Crimson Text';
+            }
+        }
+    }
+}
+#lesson {
+    background: $darkgreen repeat 50% / 50% url(../img/bg_lesson.png);
+    padding: 3rem 0 0;
+    h2 {
+        font: 400 2rem/6rem 'Homemade Apple';
+        color: $lightyellow;
+        @media(max-width:991px){
+            font: 400 1.9rem/2.66rem 'Homemade Apple';
+        }
+        @media(max-width:430px){
+            font: 400 26px/36.4px 'Homemade Apple';
+        }
+            }
+    h3{
+        font: 700 3.8rem/5.32rem 'Bebas Neue';
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        @media(max-width:575px){
+            font: 700 34px/47.6px 'Bebas Neue';
+        }
+            span{
+                font: 700 3rem/4.2rem 'Bebas Neue';
+                @media(max-width: 575px){
+                    font: 700 34px/47.6px 'Bebas Neue';
+                }
+            }
+        }
+        .text{
+            p{
+                color: $lighteryellow;
+            }
+        }
+    }
+
+footer {
+    background: $grey;
+    color: $darkgrey;
+    font: 400 16px/24px 'Crimson Text';
+    h3 {
+        font: 400 22px/30.8px 'Bebas Neue';
+        letter-spacing: .1em;
+    }
+    p{
+        margin-bottom: 0;
+    }
+    a {
+        word-break: break-all;
+        overflow-wrap: break-word;
+        white-space: normal;
+        color: $darkgrey;
+        &:hover {
+            color: $darkgrey;
+        }
+    }
+}
+.modal-content{
+    border: none;
+    border-radius: 0;
+}
+.modal-header{
+    border-radius: 0;
+    .close{
+        @media(max-width:767px){
+            display:none;
+        }
+    }
+}
+

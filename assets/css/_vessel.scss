@@ -1,0 +1,75 @@
+
+#vessel {
+    position: relative;
+  .signature {
+      font: 400 34px/47.6px 'Bebas Neue';
+      color: #000;
+      strong{
+          font-weight: normal;
+      }
+      @media(max-width:575px) {
+          font-size: 24px;
+      }
+  }
+  .post-script {
+      font-family: 'Crimson Text';
+      line-height: 26px;
+  }
+  .contact {
+      i {
+          font-size: 50px;
+          font-weight: 700;
+          font-family: 'Crimson Text';
+          font-style: normal;
+      }
+      a {
+          background: $green;
+          color: #fff;
+          text-decoration: none;
+          padding: 2rem;
+          strong {
+              margin-top: 1rem;
+              font: italic 400 28px 'Crimson Text';
+          }
+          &:first-child {
+              background: $teal;
+              &:hover{
+                  background: $hover1;
+              }
+          }
+          &:last-child {
+              background: $darkgreen;
+              &:hover{
+                  background: $hover3;
+              }
+          }
+          &:hover{
+              background: $hover2;
+          }
+      }
+  }
+}
+
+
+#vms-modal {
+  .box a:hover {
+      i {
+          background: $darkred;
+      }
+      strong {
+          color: $darkred;
+      }
+  }
+  .close {
+      &:hover {
+          color: $darkred;
+      }
+      &:focus {
+          outline: 5px auto $darkred;
+      }
+  }
+}
+.modal-backdrop.show {
+  background: $darkbrown;
+  opacity: .76;
+}
